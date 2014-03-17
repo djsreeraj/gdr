@@ -1,0 +1,364 @@
+<html>
+
+<head>
+<script>
+
+
+
+
+if ( document.addEventListener ) {
+
+    this.addEvent = function(elem, type, fn) {
+
+        elem.addEventListener(type, fn, false);
+
+        return fn;
+
+    };
+
+
+
+    this.removeEvent = function(elem, type, fn) {
+
+        elem.removeEventListener(type, fn, false);
+
+    };
+
+} else if ( document.attachEvent ) {
+
+    this.addEvent = function(elem, type, fn) {
+
+        var bound = function() {
+
+            return fn.apply(elem, arguments);
+
+        };
+
+        elem.attachEvent("on" + type, bound);
+
+        return bound;
+
+    };
+
+
+
+    this.removeEvent = function (elem, type, fn) {
+
+        elem.detachEvent("on" + type, fn);
+
+    };
+
+}
+
+
+
+addEvent(document.getElementById("source"),"keydown",function()
+
+
+
+{ // event will occur on keyup
+
+    
+var f1 = "https://drive.google.com/uc?export=download&id="
+
+var str = document.getElementById('source').value;
+
+var len = str.length;
+
+var e   = len%2;
+
+
+
+if (len==77)
+
+
+
+{
+
+var res = str.substr(32,28);
+
+var out = f1+res;
+
+document.getElementById("result").innerHTML="<h3>Success....!</h3>"+"<p>Permanent Link for Your Google Drive File :</p>"+"<br/>"+"<textarea>"+out+"</textarea>"+"<br/>"+"<a"+" "+"href='http://infoexpo.in'"+"  "+"title='Author'"+" "+">&copy"+" "+"InfoExpo"+"</a>";
+
+}
+
+
+else if(e==0 && len<70 && len>1)
+
+{
+
+document.getElementById("result").innerHTML="<h3>Input a Valid Google Drive File Link</h3>"+"<br/><br/><br/><br/><br/><br/><br/>";
+
+}
+
+else if(len<1)
+
+{
+
+document.getElementById("result").innerHTML="<h3>First Input url.</h3>"+"<br/><br/><br/><br/><br/><br/><br/>";
+
+}
+
+else 
+
+document.getElementById("result").innerHTML="<h3>Please Input a Valid Google Drive File Link</h3>"+"<br/><br/><br/><br/><br/><br/><br/>";
+
+});
+
+
+</script>
+
+
+
+<style>
+#fullbox {
+border: 1px solid #ebebeb;
+width: 310px;
+}
+.fbox{
+padding: 10px 10px 10px 10px;
+border-bottom: 1px solid #ebebeb;
+}
+.fbox img:hover{opacity:0.8}
+
+
+.blueg {      
+background: #D9F1FF;
+border-top: 1px solid white;
+border-bottom: 1px solid #ebebeb;
+font-size: 12px;
+color: #000;
+padding: 9px 11px;
+line-height: 1px;
+font-family: Verdana, Geneva, sans-serif;
+  
+}
+
+.blueg.a {
+      display:inline-block;
+}
+
+
+.blueg img{opacity:0.8}
+.blueg img:hover{opacity:1.8}
+
+
+.bluel{
+padding: 10px 10px 10px 10px;
+    background: #eef9fd;
+border-bottom: 1px solid #E6F5FF;
+}
+
+
+
+
+
+<style>
+
+      body {
+
+
+
+
+
+align: center;
+
+
+
+        min-width: 357px;
+
+        overflow-x: hidden;
+
+      }
+
+
+
+      img {
+
+        margin: 5px;
+
+        border: 2px solid black;
+
+        vertical-align: middle;
+
+        width: 75px;
+
+        height: 75px;
+
+      }
+
+
+
+
+
+/*CSS for textarea*/
+
+
+
+textarea
+
+{
+
+width: 300px;
+
+height: 50px;
+
+border-radius: 3px;
+
+border: 1px solid #CCC;
+
+padding: 5px;
+
+font-weight: 200;
+
+font-size: 15px;
+
+font-family: Verdana;
+
+box-shadow: 1px 1px 5px #CCC;
+
+}
+
+textarea:hover
+
+{
+
+width: 300px;
+
+height: 50px;
+
+border-radius: 3px;
+
+border: 1px solid #aaa;
+
+padding: 5px;
+
+font-weight: 200;
+
+font-size: 15px;
+
+font-family: Verdana;
+
+box-shadow: 1px 1px 5px #CCC;
+
+}
+
+
+
+/*input type for submit button*/
+
+
+
+input[type='button'],button,input[type='reset']
+
+{
+
+width: 150px;
+
+height: 34px;
+
+border: 2px solid white;
+
+background-color:#CCC;
+
+}
+
+input[type='button']:hover , button:hover, input[type='reset']:hover 
+
+{
+
+width: 150px;
+
+height: 34px;
+
+border: 2px solid white;
+
+background-color:#67D5FE;
+
+color:#fff;
+
+}
+
+</style>
+
+
+<head>
+
+<body>
+
+
+
+<div class="fullbox"> 
+    
+<div  class="ins"> 
+    <center>
+
+<h1 class="head"> Google DriveR </h1>
+<div class="blueg">
+    
+<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Finfoexpo.in&amp;send=false&amp;layout=button_count&amp;width=450&amp;
+show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=verdana&
+amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowtransparency="true">
+</iframe>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone></g:plusone>
+    <a  href="http://www.facebook.com/sharer.php?u=http://www.infoexpo.in" target="_blank"><img src="http://www.simplesharebuttons.com/wp-content/plugins/simple-share-buttons-adder/images/share.png" alt="Facebook" /></a>
+</div>
+
+
+<p id="demo"><div class="shead" > Enter the google Drive File url to generate Permanent download Link </div>
+
+<form>
+
+<textarea  id="source"  placeholder="https://drive.google.com/file/d/0B8vjrucO6mD4Y3o5NmZ5REM2cFU/edit?usp=sharing"></textarea>
+
+
+  <input type="reset" value="Reset" onclick="myFunction()" > 
+
+
+
+</form>
+
+
+<br/>
+    
+    
+   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- googledr -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-2020172077100839"
+     data-ad-slot="6152746378"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+    
+    
+    
+    
+    <br/>
+
+
+
+<p id="result"><br/><br/> <br/><br/><br/><br/><br/><br/><br/></p>
+    
+    
+    
+
+<br/>
+
+
+
+<p>GoogleDriveR - Beta &copy 2014 </p>
+
+Written By <a href="http://twitter.com/djsreeraj" title="Author" target="_blank">Sreeraj Melath</a> | <a href="mailto:amit@labnol.org?subject=Bug:%20GoogleDriveR&amp;body=I%20found%20an%20error%20:%20" title="Report any Error" target="_blank">Report a Bug</a>
+    
+    </center>
+    
+    </div>
+    </div> 
+
+</body>
+
+<html>
