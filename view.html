@@ -2,109 +2,7 @@
 
 <head>
 <script>
-
-
-
-
-if ( document.addEventListener ) {
-
-    this.addEvent = function(elem, type, fn) {
-
-        elem.addEventListener(type, fn, false);
-
-        return fn;
-
-    };
-
-
-
-    this.removeEvent = function(elem, type, fn) {
-
-        elem.removeEventListener(type, fn, false);
-
-    };
-
-} else if ( document.attachEvent ) {
-
-    this.addEvent = function(elem, type, fn) {
-
-        var bound = function() {
-
-            return fn.apply(elem, arguments);
-
-        };
-
-        elem.attachEvent("on" + type, bound);
-
-        return bound;
-
-    };
-
-
-
-    this.removeEvent = function (elem, type, fn) {
-
-        elem.detachEvent("on" + type, fn);
-
-    };
-
-}
-
-
-
-addEvent(document.getElementById("source"),"keydown",function()
-
-
-
-{ // event will occur on keyup
-
-    
-var f1 = "https://drive.google.com/uc?export=download&id="
-
-var str = document.getElementById('source').value;
-
-var len = str.length;
-
-var e   = len%2;
-
-
-
-if (len==77)
-
-
-
-{
-
-var res = str.substr(32,28);
-
-var out = f1+res;
-
-document.getElementById("result").innerHTML="<h3>Success....!</h3>"+"<p>Permanent Link for Your Google Drive File :</p>"+"<br/>"+"<textarea>"+out+"</textarea>"+"<br/>"+"<a"+" "+"href='http://infoexpo.in'"+"  "+"title='Author'"+" "+">&copy"+" "+"InfoExpo"+"</a>";
-
-}
-
-
-else if(e==0 && len<70 && len>1)
-
-{
-
-document.getElementById("result").innerHTML="<h3>Input a Valid Google Drive File Link</h3>"+"<br/><br/><br/><br/><br/><br/><br/>";
-
-}
-
-else if(len<1)
-
-{
-
-document.getElementById("result").innerHTML="<h3>First Input url.</h3>"+"<br/><br/><br/><br/><br/><br/><br/>";
-
-}
-
-else 
-
-document.getElementById("result").innerHTML="<h3>Please Input a Valid Google Drive File Link</h3>"+"<br/><br/><br/><br/><br/><br/><br/>";
-
-});
+var _0x1929=["\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x61\x64\x64\x45\x76\x65\x6E\x74","\x72\x65\x6D\x6F\x76\x65\x45\x76\x65\x6E\x74","\x72\x65\x6D\x6F\x76\x65\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x61\x74\x74\x61\x63\x68\x45\x76\x65\x6E\x74","\x61\x70\x70\x6C\x79","\x6F\x6E","\x64\x65\x74\x61\x63\x68\x45\x76\x65\x6E\x74","\x73\x6F\x75\x72\x63\x65","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x6B\x65\x79\x64\x6F\x77\x6E","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x64\x72\x69\x76\x65\x2E\x67\x6F\x6F\x67\x6C\x65\x2E\x63\x6F\x6D\x2F\x75\x63\x3F\x65\x78\x70\x6F\x72\x74\x3D\x64\x6F\x77\x6E\x6C\x6F\x61\x64\x26\x69\x64\x3D","\x76\x61\x6C\x75\x65","\x6C\x65\x6E\x67\x74\x68","\x73\x75\x62\x73\x74\x72","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x72\x65\x73\x75\x6C\x74","\x3C\x68\x33\x3E\x53\x75\x63\x63\x65\x73\x73\x2E\x2E\x2E\x2E\x21\x3C\x2F\x68\x33\x3E","\x3C\x70\x3E\x50\x65\x72\x6D\x61\x6E\x65\x6E\x74\x20\x4C\x69\x6E\x6B\x20\x66\x6F\x72\x20\x59\x6F\x75\x72\x20\x47\x6F\x6F\x67\x6C\x65\x20\x44\x72\x69\x76\x65\x20\x46\x69\x6C\x65\x20\x3A\x3C\x2F\x70\x3E","\x3C\x62\x72\x2F\x3E","\x3C\x74\x65\x78\x74\x61\x72\x65\x61\x3E","\x3C\x2F\x74\x65\x78\x74\x61\x72\x65\x61\x3E","\x3C\x61","\x20","\x68\x72\x65\x66\x3D\x27\x68\x74\x74\x70\x3A\x2F\x2F\x69\x6E\x66\x6F\x65\x78\x70\x6F\x2E\x69\x6E\x27","\x20\x20","\x74\x69\x74\x6C\x65\x3D\x27\x41\x75\x74\x68\x6F\x72\x27","\x3E\x26\x63\x6F\x70\x79","\x49\x6E\x66\x6F\x45\x78\x70\x6F","\x3C\x2F\x61\x3E","\x3C\x68\x33\x3E\x49\x6E\x70\x75\x74\x20\x61\x20\x56\x61\x6C\x69\x64\x20\x47\x6F\x6F\x67\x6C\x65\x20\x44\x72\x69\x76\x65\x20\x46\x69\x6C\x65\x20\x4C\x69\x6E\x6B\x3C\x2F\x68\x33\x3E","\x3C\x62\x72\x2F\x3E\x3C\x62\x72\x2F\x3E\x3C\x62\x72\x2F\x3E\x3C\x62\x72\x2F\x3E\x3C\x62\x72\x2F\x3E\x3C\x62\x72\x2F\x3E\x3C\x62\x72\x2F\x3E","\x3C\x68\x33\x3E\x46\x69\x72\x73\x74\x20\x49\x6E\x70\x75\x74\x20\x75\x72\x6C\x2E\x3C\x2F\x68\x33\x3E","\x3C\x68\x33\x3E\x50\x6C\x65\x61\x73\x65\x20\x49\x6E\x70\x75\x74\x20\x61\x20\x56\x61\x6C\x69\x64\x20\x47\x6F\x6F\x67\x6C\x65\x20\x44\x72\x69\x76\x65\x20\x46\x69\x6C\x65\x20\x4C\x69\x6E\x6B\x3C\x2F\x68\x33\x3E"];if(document[_0x1929[0]]){this[_0x1929[1]]=function (_0x2c99x1,_0x2c99x2,_0x2c99x3){_0x2c99x1[_0x1929[0]](_0x2c99x2,_0x2c99x3,false);return _0x2c99x3;} ;this[_0x1929[2]]=function (_0x2c99x1,_0x2c99x2,_0x2c99x3){_0x2c99x1[_0x1929[3]](_0x2c99x2,_0x2c99x3,false);} ;} else {if(document[_0x1929[4]]){this[_0x1929[1]]=function (_0x2c99x1,_0x2c99x2,_0x2c99x3){var _0x2c99x4=function (){return _0x2c99x3[_0x1929[5]](_0x2c99x1,arguments);} ;_0x2c99x1[_0x1929[4]](_0x1929[6]+_0x2c99x2,_0x2c99x4);return _0x2c99x4;} ;this[_0x1929[2]]=function (_0x2c99x1,_0x2c99x2,_0x2c99x3){_0x2c99x1[_0x1929[7]](_0x1929[6]+_0x2c99x2,_0x2c99x3);} ;} ;} ;addEvent(document[_0x1929[9]](_0x1929[8]),_0x1929[10],function (){var _0x2c99x5=_0x1929[11];var _0x2c99x6=document[_0x1929[9]](_0x1929[8])[_0x1929[12]];var _0x2c99x7=_0x2c99x6[_0x1929[13]];var _0x2c99x8=_0x2c99x7%2;if(_0x2c99x7==77){var _0x2c99x9=_0x2c99x6[_0x1929[14]](32,28);var _0x2c99xa=_0x2c99x5+_0x2c99x9;document[_0x1929[9]](_0x1929[16])[_0x1929[15]]=_0x1929[17]+_0x1929[18]+_0x1929[19]+_0x1929[20]+_0x2c99xa+_0x1929[21]+_0x1929[19]+_0x1929[22]+_0x1929[23]+_0x1929[24]+_0x1929[25]+_0x1929[26]+_0x1929[23]+_0x1929[27]+_0x1929[23]+_0x1929[28]+_0x1929[29];} else {if(_0x2c99x8==0&&_0x2c99x7<70&&_0x2c99x7>1){document[_0x1929[9]](_0x1929[16])[_0x1929[15]]=_0x1929[30]+_0x1929[31];} else {if(_0x2c99x7<1){document[_0x1929[9]](_0x1929[16])[_0x1929[15]]=_0x1929[32]+_0x1929[31];} else {document[_0x1929[9]](_0x1929[16])[_0x1929[15]]=_0x1929[33]+_0x1929[31];} ;} ;} ;} );
 
 
 </script>
@@ -118,7 +16,7 @@ document.getElementById("result").innerHTML="<h3>Please Input a Valid Google Dri
 border: 5px solid #FF0066;
 border-radius:5px;
 
-width: 410px;
+width: 450px;
 
 }
 
@@ -177,11 +75,11 @@ textarea
 
 
 
-width: 300px;
+width: 350px;
 
 
 
-height: 40px;
+height: 45px;
 
 
 
@@ -217,9 +115,9 @@ textarea:hover
 
 {
 
-width: 300px;
+width: 350px;
 
-height: 40px;
+height: 45px;
 
 
 border-radius: 3px;
@@ -324,7 +222,15 @@ amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidde
 <br/>
     
     
-   
+   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- gdr top -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:100px"
+     data-ad-client="ca-pub-2020172077100839"
+     data-ad-slot="9884941977"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
     
     
     
